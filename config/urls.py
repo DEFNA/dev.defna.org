@@ -3,11 +3,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include
 from django.urls import path
+from django.views.generic import TemplateView
 
 from health_check.views import HealthCheckView
 
 
 urlpatterns = [
+    path("", TemplateView.as_view(template_name="home.html"), name="home"),
     path(settings.ADMIN_URL, admin.site.urls),
     path(
         "health/",
