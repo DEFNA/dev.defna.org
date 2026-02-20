@@ -1,42 +1,16 @@
+{% load tailwind_cli %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DEFNA - Coming Soon</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background-color: #f8f9fa;
-      color: #333;
-    }
-    .container {
-      text-align: center;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.25rem;
-      color: #666;
-    }
-  </style>
+  {% tailwind_css %}
 </head>
-<body>
-  <div class="container">
-    <h1>DEFNA</h1>
-    <p>Coming Soon</p>
+<body class="flex min-h-screen items-center justify-center bg-gray-50 text-gray-800">
+  <div class="p-8 text-center">
+    <h1 class="mb-4 text-5xl font-bold">DEFNA</h1>
+    <p class="text-xl text-gray-500">Coming Soon</p>
   </div>
 </body>
 </html>
