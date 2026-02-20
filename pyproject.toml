@@ -1,0 +1,100 @@
+[project]
+name = "dev_defna_org"
+version = "2026.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "blessed",
+    "django-browser-reload",
+    "django-click",
+    "django-health-check",
+    "django-prodserver[gunicorn]",
+    "django-q2",
+    "django-tailwind-cli",
+    "django<6.0",
+    "environs[django]",
+    "psycopg[binary]",
+    "whitenoise",
+]
+
+[dependency-groups]
+dev = [
+    "django-test-plus",
+    "model-bakery",
+    "pytest",
+    "pytest-django",
+]
+
+[tool.bumpver]
+commit = true
+commit_message = ":bookmark: bump version {old_version} -> {new_version}"
+current_version = "2026.1.1"
+push = false  # disabled for GitHub Actions
+tag = true
+version_pattern = "YYYY.MM.INC1"
+
+[tool.uv]
+package = false
+
+[tool.bumpver.file_patterns]
+"config/__init__.py" = [
+    '__version__ = "{version}"',
+]
+"pyproject.toml" = [
+  'version = "{version}"'
+]
+
+[tool.black]
+target-version = ["py313"]
+
+[tool.coverage.run]
+omit = [
+    "*/admin.py",
+    "*/manage.py",
+    "*/migrations/*",
+    "*/tests/*",
+    "conftest.py",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+addopts = "--nomigrations --reuse-db"
+norecursedirs = ".git* frontend media static templates"
+python_files = "test_*.py"
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".github",
+    ".hg",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "build",
+    "dist",
+    "migrations",
+    "node_modules",
+    "static",
+]
+# Same as Black.
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F"]
+ignore = ["E501", "E741"]                # temporary
+per-file-ignores = {}
+# Enable Pyflakes `E` and `F` codes by default.
+select = ["E", "F"]
+unfixable = []
