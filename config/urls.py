@@ -5,8 +5,13 @@ from django.urls import include
 from django.urls import path
 from django.views.generic import TemplateView
 
+from config import __version__
 from health_check.views import HealthCheckView
 
+admin_header = f"DEFNA v{__version__}"
+admin.site.enable_nav_sidebar = False
+admin.site.site_header = admin_header
+admin.site.site_title = admin_header
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
