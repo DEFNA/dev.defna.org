@@ -12,9 +12,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
     <link rel="manifest" href="/static/site.webmanifest">
   </head>
-  <body class="bg-surface text-text font-sans antialiased">
+  <body class="font-sans antialiased bg-surface text-text">
 
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-django-green focus:text-white focus:rounded-md">
+    <a href="#main-content" class="sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:py-2 focus:px-4 focus:text-white focus:rounded-md focus:not-sr-only focus:bg-django-green">
       Skip to main content
     </a>
 
@@ -22,11 +22,11 @@
 
     <main id="main-content">
       {% if messages %}
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+        <div class="px-4 pt-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           {% for message in messages %}
             <div class="rounded-md p-4 mb-4
-              {% if message.tags == 'success' %}bg-django-green-pale text-django-green-dark border border-django-green-light
-              {% else %}bg-yellow-50 text-yellow-800 border border-yellow-200{% endif %}">
+                        {% if message.tags == 'success' %}bg-django-green-pale text-django-green-dark border border-django-green-light
+                        {% else %}bg-yellow-50 text-yellow-800 border border-yellow-200{% endif %}">
               {{ message }}
             </div>
           {% endfor %}

@@ -2,430 +2,431 @@
 {% load static %}
 
 {% block title %}DjangoCon US{% endblock %}
+
 {% block meta_description %}DjangoCon US is the annual conference for the North American Django community, organised by DEFNA since 2015.{% endblock %}
 
 {% block content %}
 
 {# ── Page header ── #}
-<section class="bg-django-green text-white overflow-hidden">
-  <div class="grid grid-cols-1 lg:grid-cols-2">
-    <div class="flex justify-end">
-      <div class="w-full max-w-[640px] px-4 sm:px-6 lg:px-8 py-20 lg:py-28 flex flex-col justify-center">
-        <p class="text-django-green-light text-sm font-semibold uppercase tracking-widest mb-4">Events</p>
-        <h1 class="text-4xl sm:text-5xl font-bold leading-tight">DjangoCon US</h1>
-        <p class="mt-6 text-lg text-gray-200 max-w-2xl leading-relaxed">
-          The premier annual gathering of Django developers in North America — featuring talks, tutorials, and sprints. Organised by DEFNA since 2015.
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="https://djangocon.us/" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 border border-white/25 text-white text-sm font-medium transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/>
-            </svg>
-            djangocon.us ↗
-          </a>
-          <a href="https://www.flickr.com/photos/djangocon/albums/" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 border border-white/25 text-white text-sm font-medium transition-colors">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-            </svg>
-            Conference photos ↗
-          </a>
+  <section class="overflow-hidden text-white bg-django-green">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="flex justify-end">
+        <div class="flex flex-col justify-center py-20 px-4 w-full sm:px-6 lg:py-28 lg:px-8 max-w-[640px]">
+          <p class="mb-4 text-sm font-semibold tracking-widest uppercase text-django-green-light">Events</p>
+          <h1 class="text-4xl font-bold leading-tight sm:text-5xl">DjangoCon US</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gray-200">
+            The premier annual gathering of Django developers in North America — featuring talks, tutorials, and sprints. Organised by DEFNA since 2015.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-6">
+            <a href="https://djangocon.us/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-2 items-center py-2 px-4 text-sm font-medium text-white rounded-md border transition-colors bg-white/10 border-white/25 hover:bg-white/20">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/>
+              </svg>
+              djangocon.us ↗
+            </a>
+            <a href="https://www.flickr.com/photos/djangocon/albums/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-2 items-center py-2 px-4 text-sm font-medium text-white rounded-md border transition-colors bg-white/10 border-white/25 hover:bg-white/20">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              Conference photos ↗
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="relative hidden lg:block min-h-[540px]">
-      <img src="{% static 'images/djangocon.jpg' %}"
-           alt="DjangoCon US"
-           class="absolute inset-0 w-full h-full object-cover object-center">
+      <div class="hidden relative lg:block min-h-[540px]">
+        <img src="{% static 'images/djangocon.jpg' %}"
+             alt="DjangoCon US"
+             class="object-cover object-center absolute inset-0 w-full h-full">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 {# ── Upcoming edition ── #}
-{% if upcoming %}
-<section class="py-12 border-b border-gray-100" aria-labelledby="upcoming-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 id="upcoming-heading" class="text-xs font-semibold uppercase tracking-widest text-text-muted mb-4">Next Conference</h2>
-    <div class="bg-django-green-pale rounded-xl border border-django-green-light/30 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
-      <div class="flex-1">
-        <p class="text-sm font-semibold text-django-green uppercase tracking-widest">DjangoCon US {{ upcoming.year }}</p>
-        <h3 class="mt-1 text-2xl font-bold text-text">{{ upcoming.location }}</h3>
-        <p class="mt-2 text-text-muted">
-          <time datetime="{{ upcoming.start_date|date:'Y-m-d' }}">{{ upcoming.start_date|date:"F j" }}</time>
-          –
-          <time datetime="{{ upcoming.end_date|date:'Y-m-d' }}">{{ upcoming.end_date|date:"F j, Y" }}</time>
-        </p>
-        {% if upcoming.highlight %}
-          <p class="mt-3 text-sm text-text-muted">{{ upcoming.highlight }}</p>
-        {% endif %}
+  {% if upcoming %}
+    <section class="py-12 border-b border-gray-100" aria-labelledby="upcoming-heading">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <h2 id="upcoming-heading" class="mb-4 text-xs font-semibold tracking-widest uppercase text-text-muted">Next Conference</h2>
+        <div class="flex flex-col gap-6 p-6 rounded-xl border sm:flex-row sm:items-center sm:p-8 bg-django-green-pale border-django-green-light/30">
+          <div class="flex-1">
+            <p class="text-sm font-semibold tracking-widest uppercase text-django-green">DjangoCon US {{ upcoming.year }}</p>
+            <h3 class="mt-1 text-2xl font-bold text-text">{{ upcoming.location }}</h3>
+            <p class="mt-2 text-text-muted">
+              <time datetime="{{ upcoming.start_date|date:'Y-m-d' }}">{{ upcoming.start_date|date:"F j" }}</time>
+              –
+              <time datetime="{{ upcoming.end_date|date:'Y-m-d' }}">{{ upcoming.end_date|date:"F j, Y" }}</time>
+            </p>
+            {% if upcoming.highlight %}
+              <p class="mt-3 text-sm text-text-muted">{{ upcoming.highlight }}</p>
+            {% endif %}
+          </div>
+          {% if upcoming.website_url %}
+            <a href="{{ upcoming.website_url }}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-2 items-center py-3 px-6 font-semibold text-white rounded-md shadow-sm transition-colors bg-django-green shrink-0 hover:bg-django-green-dark">
+              Visit conference site
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
       </div>
-      {% if upcoming.website_url %}
-        <a href="{{ upcoming.website_url }}" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-django-green hover:bg-django-green-dark text-white font-semibold transition-colors shadow-sm shrink-0">
-          Visit conference site
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-          </svg>
-        </a>
-      {% endif %}
-    </div>
-  </div>
-</section>
-{% endif %}
+    </section>
+  {% endif %}
 
 {# ── Resources strip ── #}
-<section class="bg-django-green-pale border-b border-django-green-light/20 py-8" aria-label="DjangoCon US resources">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-text-muted mb-4">Resources</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <section class="py-8 border-b bg-django-green-pale border-django-green-light/20" aria-label="DjangoCon US resources">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <h2 class="mb-4 text-xs font-semibold tracking-widest uppercase text-text-muted">Resources</h2>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
 
-      <a href="https://djangocon.us/" target="_blank" rel="noopener noreferrer"
-         class="group flex items-start gap-4 bg-white rounded-xl border border-django-green-light/20 p-5 shadow-sm hover:shadow-md hover:border-django-green transition-all">
-        <div class="w-10 h-10 rounded-lg bg-django-green-pale flex items-center justify-center shrink-0 group-hover:bg-django-green transition-colors">
-          <svg class="w-5 h-5 text-django-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/>
-          </svg>
-        </div>
-        <div>
-          <p class="font-semibold text-text group-hover:text-django-green transition-colors text-sm">djangocon.us</p>
-          <p class="text-xs text-text-muted mt-0.5">Official DjangoCon US website — news, tickets, and programme information.</p>
-        </div>
-      </a>
+        <a href="https://djangocon.us/" target="_blank" rel="noopener noreferrer"
+           class="flex gap-4 items-start p-5 bg-white rounded-xl border shadow-sm transition-all hover:shadow-md group border-django-green-light/20 hover:border-django-green">
+          <div class="flex justify-center items-center w-10 h-10 rounded-lg transition-colors bg-django-green-pale shrink-0 group-hover:bg-django-green">
+            <svg class="w-5 h-5 transition-colors group-hover:text-white text-django-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-semibold transition-colors text-text group-hover:text-django-green">djangocon.us</p>
+            <p class="mt-0.5 text-xs text-text-muted">Official DjangoCon US website — news, tickets, and programme information.</p>
+          </div>
+        </a>
 
-      <a href="https://www.flickr.com/photos/djangocon/albums/" target="_blank" rel="noopener noreferrer"
-         class="group flex items-start gap-4 bg-white rounded-xl border border-django-green-light/20 p-5 shadow-sm hover:shadow-md hover:border-django-green transition-all">
-        <div class="w-10 h-10 rounded-lg bg-django-green-pale flex items-center justify-center shrink-0 group-hover:bg-django-green transition-colors">
-          <svg class="w-5 h-5 text-django-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-          </svg>
-        </div>
-        <div>
-          <p class="font-semibold text-text group-hover:text-django-green transition-colors text-sm">Conference Photos</p>
-          <p class="text-xs text-text-muted mt-0.5">Browse the full Flickr photo archive from past DjangoCon US events.</p>
-        </div>
-      </a>
+        <a href="https://www.flickr.com/photos/djangocon/albums/" target="_blank" rel="noopener noreferrer"
+           class="flex gap-4 items-start p-5 bg-white rounded-xl border shadow-sm transition-all hover:shadow-md group border-django-green-light/20 hover:border-django-green">
+          <div class="flex justify-center items-center w-10 h-10 rounded-lg transition-colors bg-django-green-pale shrink-0 group-hover:bg-django-green">
+            <svg class="w-5 h-5 transition-colors group-hover:text-white text-django-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-semibold transition-colors text-text group-hover:text-django-green">Conference Photos</p>
+            <p class="mt-0.5 text-xs text-text-muted">Browse the full Flickr photo archive from past DjangoCon US events.</p>
+          </div>
+        </a>
 
-      <a href="{% url 'contact' %}?subject=sponsorship"
-         class="group flex items-start gap-4 bg-white rounded-xl border border-django-green-light/20 p-5 shadow-sm hover:shadow-md hover:border-django-green transition-all">
-        <div class="w-10 h-10 rounded-lg bg-django-green-pale flex items-center justify-center shrink-0 group-hover:bg-django-green transition-colors">
-          <svg class="w-5 h-5 text-django-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-        </div>
-        <div>
-          <p class="font-semibold text-text group-hover:text-django-green transition-colors text-sm">Sponsorship</p>
-          <p class="text-xs text-text-muted mt-0.5">Interested in sponsoring DjangoCon US? Get in touch with the team.</p>
-        </div>
-      </a>
+        <a href="{% url 'contact' %}?subject=sponsorship"
+           class="flex gap-4 items-start p-5 bg-white rounded-xl border shadow-sm transition-all hover:shadow-md group border-django-green-light/20 hover:border-django-green">
+          <div class="flex justify-center items-center w-10 h-10 rounded-lg transition-colors bg-django-green-pale shrink-0 group-hover:bg-django-green">
+            <svg class="w-5 h-5 transition-colors group-hover:text-white text-django-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-semibold transition-colors text-text group-hover:text-django-green">Sponsorship</p>
+            <p class="mt-0.5 text-xs text-text-muted">Interested in sponsoring DjangoCon US? Get in touch with the team.</p>
+          </div>
+        </a>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 {# ── All editions — card grid ── #}
-<section class="py-16 lg:py-20 border-b border-gray-100" aria-labelledby="editions-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 id="editions-heading" class="text-xs font-semibold uppercase tracking-widest text-text-muted mb-8">All Editions</h2>
+  <section class="py-16 border-b border-gray-100 lg:py-20" aria-labelledby="editions-heading">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <h2 id="editions-heading" class="mb-8 text-xs font-semibold tracking-widest uppercase text-text-muted">All Editions</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
       {# 2026 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2026.svg" alt="DjangoCon US 2026 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <div class="flex items-center gap-2 mb-1">
-            <h3 class="text-lg font-bold text-text">DjangoCon US 2026</h3>
-            <span class="px-2 py-0.5 rounded text-xs font-semibold bg-defna-gold/15 text-defna-gold-dark">Upcoming</span>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2026.svg" alt="DjangoCon US 2026 logo" class="object-contain max-w-full max-h-24" loading="lazy">
           </div>
-          <p class="text-sm font-medium text-django-green">Chicago, Illinois</p>
-          <p class="text-sm text-text-muted mt-1">August 24–28, 2026</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">voco Chicago Downtown — talks, tutorials, and sprints with opportunity grants available.</p>
-          <a href="https://2026.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+          <div class="flex flex-col flex-1 p-6">
+            <div class="flex gap-2 items-center mb-1">
+              <h3 class="text-lg font-bold text-text">DjangoCon US 2026</h3>
+              <span class="py-0.5 px-2 text-xs font-semibold rounded bg-defna-gold/15 text-defna-gold-dark">Upcoming</span>
+            </div>
+            <p class="text-sm font-medium text-django-green">Chicago, Illinois</p>
+            <p class="mt-1 text-sm text-text-muted">August 24–28, 2026</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">voco Chicago Downtown — talks, tutorials, and sprints with opportunity grants available.</p>
+            <a href="https://2026.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2025 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2025-pink.svg" alt="DjangoCon US 2025 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <h3 class="text-lg font-bold text-text mb-1">DjangoCon US 2025</h3>
-          <p class="text-sm font-medium text-django-green">Chicago, Illinois</p>
-          <p class="text-sm text-text-muted mt-1">September 8–12, 2025</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">voco Chicago Downtown — celebrating 20 years of Django with talks, tutorials, and sprints.</p>
-          <a href="https://2025.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2025-pink.svg" alt="DjangoCon US 2025 logo" class="object-contain max-w-full max-h-24" loading="lazy">
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="mb-1 text-lg font-bold text-text">DjangoCon US 2025</h3>
+            <p class="text-sm font-medium text-django-green">Chicago, Illinois</p>
+            <p class="mt-1 text-sm text-text-muted">September 8–12, 2025</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">voco Chicago Downtown — celebrating 20 years of Django with talks, tutorials, and sprints.</p>
+            <a href="https://2025.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2024 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2024-blue.svg" alt="DjangoCon US 2024 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <h3 class="text-lg font-bold text-text mb-1">DjangoCon US 2024</h3>
-          <p class="text-sm font-medium text-django-green">Durham, North Carolina</p>
-          <p class="text-sm text-text-muted mt-1">September 22–27, 2024</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">Over 300 attendees and 50+ talks and tutorials.</p>
-          <a href="https://2024.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2024-blue.svg" alt="DjangoCon US 2024 logo" class="object-contain max-w-full max-h-24" loading="lazy">
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="mb-1 text-lg font-bold text-text">DjangoCon US 2024</h3>
+            <p class="text-sm font-medium text-django-green">Durham, North Carolina</p>
+            <p class="mt-1 text-sm text-text-muted">September 22–27, 2024</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">Over 300 attendees and 50+ talks and tutorials.</p>
+            <a href="https://2024.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2023 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2023.svg" alt="DjangoCon US 2023 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <h3 class="text-lg font-bold text-text mb-1">DjangoCon US 2023</h3>
-          <p class="text-sm font-medium text-django-green">Durham, North Carolina</p>
-          <p class="text-sm text-text-muted mt-1">October 16–20, 2023</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">Durham Convention Center.</p>
-          <a href="https://2023.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2023.svg" alt="DjangoCon US 2023 logo" class="object-contain max-w-full max-h-24" loading="lazy">
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="mb-1 text-lg font-bold text-text">DjangoCon US 2023</h3>
+            <p class="text-sm font-medium text-django-green">Durham, North Carolina</p>
+            <p class="mt-1 text-sm text-text-muted">October 16–20, 2023</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">Durham Convention Center.</p>
+            <a href="https://2023.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2022 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2022.svg" alt="DjangoCon US 2022 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <h3 class="text-lg font-bold text-text mb-1">DjangoCon US 2022</h3>
-          <p class="text-sm font-medium text-django-green">San Diego, California</p>
-          <p class="text-sm text-text-muted mt-1">October 16–21, 2022</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">San Diego Marriott Mission Valley.</p>
-          <a href="https://2022.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2022.svg" alt="DjangoCon US 2022 logo" class="object-contain max-w-full max-h-24" loading="lazy">
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="mb-1 text-lg font-bold text-text">DjangoCon US 2022</h3>
+            <p class="text-sm font-medium text-django-green">San Diego, California</p>
+            <p class="mt-1 text-sm text-text-muted">October 16–21, 2022</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">San Diego Marriott Mission Valley.</p>
+            <a href="https://2022.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2021 — Virtual #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2021.svg" alt="DjangoCon US 2021 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <div class="flex items-center gap-2 mb-1">
-            <h3 class="text-lg font-bold text-text">DjangoCon US 2021</h3>
-            <span class="px-2 py-0.5 rounded text-xs font-semibold bg-blue-50 text-blue-700">Virtual</span>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2021.svg" alt="DjangoCon US 2021 logo" class="object-contain max-w-full max-h-24" loading="lazy">
           </div>
-          <p class="text-sm font-medium text-django-green">Online</p>
-          <p class="text-sm text-text-muted mt-1">October 22–23, 2021</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">Fully virtual edition — no tutorials or sprints.</p>
-          <a href="https://2021.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+          <div class="flex flex-col flex-1 p-6">
+            <div class="flex gap-2 items-center mb-1">
+              <h3 class="text-lg font-bold text-text">DjangoCon US 2021</h3>
+              <span class="py-0.5 px-2 text-xs font-semibold text-blue-700 bg-blue-50 rounded">Virtual</span>
+            </div>
+            <p class="text-sm font-medium text-django-green">Online</p>
+            <p class="mt-1 text-sm text-text-muted">October 22–23, 2021</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">Fully virtual edition — no tutorials or sprints.</p>
+            <a href="https://2021.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2020 — Cancelled #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-gray-50 flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2020.svg" alt="DjangoCon US 2020 logo" class="max-h-24 max-w-full object-contain opacity-50 grayscale" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <div class="flex items-center gap-2 mb-1">
-            <h3 class="text-lg font-bold text-text">DjangoCon US 2020</h3>
-            <span class="px-2 py-0.5 rounded text-xs font-semibold bg-gray-100 text-gray-500">Cancelled</span>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-gray-50">
+            <img src="https://www.defna.org/img/events/djangocon2020.svg" alt="DjangoCon US 2020 logo" class="object-contain max-w-full max-h-24 opacity-50 grayscale" loading="lazy">
           </div>
-          <p class="text-sm font-medium text-text-muted">San Diego, California</p>
-          <p class="text-sm text-text-muted mt-1">October 11–16, 2020</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">Cancelled due to COVID-19.</p>
-          <a href="https://2020.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-text-muted hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+          <div class="flex flex-col flex-1 p-6">
+            <div class="flex gap-2 items-center mb-1">
+              <h3 class="text-lg font-bold text-text">DjangoCon US 2020</h3>
+              <span class="py-0.5 px-2 text-xs font-semibold text-gray-500 bg-gray-100 rounded">Cancelled</span>
+            </div>
+            <p class="text-sm font-medium text-text-muted">San Diego, California</p>
+            <p class="mt-1 text-sm text-text-muted">October 11–16, 2020</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">Cancelled due to COVID-19.</p>
+            <a href="https://2020.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-text-muted">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2019 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2019.svg" alt="DjangoCon US 2019 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <h3 class="text-lg font-bold text-text mb-1">DjangoCon US 2019</h3>
-          <p class="text-sm font-medium text-django-green">San Diego, California</p>
-          <p class="text-sm text-text-muted mt-1">September 22–27, 2019</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">San Diego Marriott Mission Valley.</p>
-          <a href="https://2019.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2019.svg" alt="DjangoCon US 2019 logo" class="object-contain max-w-full max-h-24" loading="lazy">
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="mb-1 text-lg font-bold text-text">DjangoCon US 2019</h3>
+            <p class="text-sm font-medium text-django-green">San Diego, California</p>
+            <p class="mt-1 text-sm text-text-muted">September 22–27, 2019</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">San Diego Marriott Mission Valley.</p>
+            <a href="https://2019.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2018 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2018.svg" alt="DjangoCon US 2018 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <h3 class="text-lg font-bold text-text mb-1">DjangoCon US 2018</h3>
-          <p class="text-sm font-medium text-django-green">San Diego, California</p>
-          <p class="text-sm text-text-muted mt-1">October 14–19, 2018</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">San Diego Marriott Mission Valley.</p>
-          <a href="https://2018.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2018.svg" alt="DjangoCon US 2018 logo" class="object-contain max-w-full max-h-24" loading="lazy">
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="mb-1 text-lg font-bold text-text">DjangoCon US 2018</h3>
+            <p class="text-sm font-medium text-django-green">San Diego, California</p>
+            <p class="mt-1 text-sm text-text-muted">October 14–19, 2018</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">San Diego Marriott Mission Valley.</p>
+            <a href="https://2018.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2017 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2017.svg" alt="DjangoCon US 2017 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <h3 class="text-lg font-bold text-text mb-1">DjangoCon US 2017</h3>
-          <p class="text-sm font-medium text-django-green">Spokane, Washington</p>
-          <p class="text-sm text-text-muted mt-1">August 13–18, 2017</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">Hotel RL by Red Lion.</p>
-          <a href="https://2017.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2017.svg" alt="DjangoCon US 2017 logo" class="object-contain max-w-full max-h-24" loading="lazy">
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="mb-1 text-lg font-bold text-text">DjangoCon US 2017</h3>
+            <p class="text-sm font-medium text-django-green">Spokane, Washington</p>
+            <p class="mt-1 text-sm text-text-muted">August 13–18, 2017</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">Hotel RL by Red Lion.</p>
+            <a href="https://2017.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2016 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2016.png" alt="DjangoCon US 2016 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <h3 class="text-lg font-bold text-text mb-1">DjangoCon US 2016</h3>
-          <p class="text-sm font-medium text-django-green">Philadelphia, Pennsylvania</p>
-          <p class="text-sm text-text-muted mt-1">July 17–22, 2016</p>
-          <p class="text-xs text-text-muted mt-2 leading-relaxed flex-1">The Wharton School, University of Pennsylvania.</p>
-          <a href="https://2016.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2016.png" alt="DjangoCon US 2016 logo" class="object-contain max-w-full max-h-24" loading="lazy">
+          </div>
+          <div class="flex flex-col flex-1 p-6">
+            <h3 class="mb-1 text-lg font-bold text-text">DjangoCon US 2016</h3>
+            <p class="text-sm font-medium text-django-green">Philadelphia, Pennsylvania</p>
+            <p class="mt-1 text-sm text-text-muted">July 17–22, 2016</p>
+            <p class="flex-1 mt-2 text-xs leading-relaxed text-text-muted">The Wharton School, University of Pennsylvania.</p>
+            <a href="https://2016.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
       {# 2015 #}
-      <article class="bg-white rounded-2xl border border-django-green-light/20 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
-        <div class="bg-django-green-pale flex items-center justify-center p-8 h-40">
-          <img src="https://www.defna.org/img/events/djangocon2015.png" alt="DjangoCon US 2015 logo" class="max-h-24 max-w-full object-contain" loading="lazy">
-        </div>
-        <div class="flex flex-col flex-1 p-6">
-          <div class="flex items-center gap-2 mb-1">
-            <h3 class="text-lg font-bold text-text">DjangoCon US 2015</h3>
-            <span class="px-2 py-0.5 rounded text-xs font-semibold bg-django-green-pale text-django-green text-xs">First DEFNA edition</span>
+        <article class="flex overflow-hidden flex-col bg-white rounded-2xl border shadow-sm transition-shadow hover:shadow-md border-django-green-light/20">
+          <div class="flex justify-center items-center p-8 h-40 bg-django-green-pale">
+            <img src="https://www.defna.org/img/events/djangocon2015.png" alt="DjangoCon US 2015 logo" class="object-contain max-w-full max-h-24" loading="lazy">
           </div>
-          <p class="text-sm text-text-muted mt-1">September 6–11, 2015</p>
-          <a href="https://2015.djangocon.us" target="_blank" rel="noopener noreferrer"
-             class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-django-green hover:underline">
-            Conference site ↗
-          </a>
-        </div>
-      </article>
+          <div class="flex flex-col flex-1 p-6">
+            <div class="flex gap-2 items-center mb-1">
+              <h3 class="text-lg font-bold text-text">DjangoCon US 2015</h3>
+              <span class="py-0.5 px-2 text-xs font-semibold rounded bg-django-green-pale text-django-green">First DEFNA edition</span>
+            </div>
+            <p class="mt-1 text-sm text-text-muted">September 6–11, 2015</p>
+            <a href="https://2015.djangocon.us" target="_blank" rel="noopener noreferrer"
+               class="inline-flex gap-1 items-center mt-4 text-sm font-semibold hover:underline text-django-green">
+              Conference site ↗
+            </a>
+          </div>
+        </article>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 {# ── Conference history timeline ── #}
-{% if editions %}
-<section class="py-16 lg:py-20" aria-labelledby="history-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 id="history-heading" class="text-2xl font-bold text-text mb-10">Conference History</h2>
+  {% if editions %}
+    <section class="py-16 lg:py-20" aria-labelledby="history-heading">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <h2 id="history-heading" class="mb-10 text-2xl font-bold text-text">Conference History</h2>
 
-    <ol class="relative border-l-2 border-django-green-light/30 space-y-0">
-      {% for edition in editions %}
-      <li class="relative pl-8 pb-8 last:pb-0">
+        <ol class="relative space-y-0 border-l-2 border-django-green-light/30">
+          {% for edition in editions %}
+            <li class="relative pb-8 pl-8 last:pb-0">
         {# Timeline dot #}
-        <span class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-django-green-light
-          {% if edition.status == 'upcoming' %}bg-defna-gold border-defna-gold
-          {% elif edition.status == 'cancelled' %}bg-gray-300 border-gray-300
-          {% else %}bg-django-green{% endif %}">
-        </span>
+              <span class="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-django-green-light
+                           {% if edition.status == 'upcoming' %}bg-defna-gold border-defna-gold
+                           {% elif edition.status == 'cancelled' %}bg-gray-300 border-gray-300
+                           {% else %}bg-django-green{% endif %}">
+              </span>
 
-        <div class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6">
-          <div class="shrink-0 w-16">
-            <span class="text-lg font-bold text-django-green">{{ edition.year }}</span>
-          </div>
+              <div class="flex flex-col gap-2 sm:flex-row sm:gap-6 sm:items-start">
+                <div class="w-16 shrink-0">
+                  <span class="text-lg font-bold text-django-green">{{ edition.year }}</span>
+                </div>
 
-          <div class="flex-1">
-            <div class="flex flex-wrap items-center gap-2 mb-1">
-              <h3 class="font-semibold text-text">{{ edition.location }}</h3>
+                <div class="flex-1">
+                  <div class="flex flex-wrap gap-2 items-center mb-1">
+                    <h3 class="font-semibold text-text">{{ edition.location }}</h3>
 
               {# Status badge #}
-              {% if edition.status == 'upcoming' %}
-                <span class="px-2 py-0.5 rounded text-xs font-semibold bg-defna-gold/15 text-defna-gold-dark">Upcoming</span>
-              {% elif edition.status == 'cancelled' %}
-                <span class="px-2 py-0.5 rounded text-xs font-semibold bg-gray-100 text-gray-500">Cancelled</span>
-              {% elif edition.status == 'virtual' %}
-                <span class="px-2 py-0.5 rounded text-xs font-semibold bg-blue-50 text-blue-700">Virtual</span>
-              {% endif %}
-            </div>
+                    {% if edition.status == 'upcoming' %}
+                      <span class="py-0.5 px-2 text-xs font-semibold rounded bg-defna-gold/15 text-defna-gold-dark">Upcoming</span>
+                    {% elif edition.status == 'cancelled' %}
+                      <span class="py-0.5 px-2 text-xs font-semibold text-gray-500 bg-gray-100 rounded">Cancelled</span>
+                    {% elif edition.status == 'virtual' %}
+                      <span class="py-0.5 px-2 text-xs font-semibold text-blue-700 bg-blue-50 rounded">Virtual</span>
+                    {% endif %}
+                  </div>
 
-            <p class="text-sm text-text-muted">
-              <time datetime="{{ edition.start_date|date:'Y-m-d' }}">{{ edition.start_date|date:"F j" }}</time>
-              –
-              <time datetime="{{ edition.end_date|date:'Y-m-d' }}">{{ edition.end_date|date:"F j, Y" }}</time>
-            </p>
+                  <p class="text-sm text-text-muted">
+                    <time datetime="{{ edition.start_date|date:'Y-m-d' }}">{{ edition.start_date|date:"F j" }}</time>
+                    –
+                    <time datetime="{{ edition.end_date|date:'Y-m-d' }}">{{ edition.end_date|date:"F j, Y" }}</time>
+                  </p>
 
-            {% if edition.highlight %}
-              <p class="mt-1 text-sm text-text-muted italic">{{ edition.highlight }}</p>
-            {% endif %}
+                  {% if edition.highlight %}
+                    <p class="mt-1 text-sm italic text-text-muted">{{ edition.highlight }}</p>
+                  {% endif %}
 
-            {% if edition.website_url %}
-              <a href="{{ edition.website_url }}" target="_blank" rel="noopener noreferrer"
-                 class="mt-2 inline-flex items-center gap-1 text-sm font-medium text-django-green hover:underline">
-                Conference site ↗
-              </a>
-            {% endif %}
-          </div>
-        </div>
-      </li>
-      {% endfor %}
-    </ol>
-  </div>
-</section>
-{% endif %}
+                  {% if edition.website_url %}
+                    <a href="{{ edition.website_url }}" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex gap-1 items-center mt-2 text-sm font-medium hover:underline text-django-green">
+                      Conference site ↗
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+  {% endif %}
 
 {# ── Donate CTA ── #}
-<section class="bg-django-green text-white py-12">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-2xl font-bold">Support DjangoCon US</h2>
-    <p class="mt-3 text-django-green-light">Your donation helps fund diversity tickets and financial aid, keeping the conference accessible to everyone.</p>
-    <a href="{% url 'donate' %}"
-       class="mt-6 inline-flex items-center px-6 py-3 rounded-md bg-defna-gold hover:bg-defna-gold-dark text-django-green-dark font-semibold transition-colors shadow-sm">
-      Donate to DEFNA
-    </a>
-  </div>
-</section>
+  <section class="py-12 text-white bg-django-green">
+    <div class="px-4 mx-auto max-w-3xl text-center sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold">Support DjangoCon US</h2>
+      <p class="mt-3 text-django-green-light">Your donation helps fund diversity tickets and financial aid, keeping the conference accessible to everyone.</p>
+      <a href="{% url 'donate' %}"
+         class="inline-flex items-center py-3 px-6 mt-6 font-semibold rounded-md shadow-sm transition-colors bg-defna-gold text-django-green-dark hover:bg-defna-gold-dark">
+        Donate to DEFNA
+      </a>
+    </div>
+  </section>
 
 {# ── Full-width photo ── #}
-<div class="w-full">
-  <img src="{% static 'images/djangocon.jpg' %}"
-       alt="Django community"
-       class="w-full h-[800px] object-cover object-center -mb-20">
-</div>
+  <div class="w-full">
+    <img src="{% static 'images/djangocon.jpg' %}"
+         alt="Django community"
+         class="object-cover object-center -mb-20 w-full h-[800px]">
+  </div>
 
-{% endblock %}
+{% endblock content %}
