@@ -1,0 +1,45 @@
+{% load tailwind_cli %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block meta_description %}Django Events Foundation North America — supporting the Django community through DjangoCon US, grants, and sponsored events.{% endblock %}">
+    <title>{% block title %}DEFNA{% endblock %} — Django Events Foundation North America</title>
+    {% tailwind_css %}
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <link rel="manifest" href="/static/site.webmanifest">
+  </head>
+  <body class="bg-surface text-text font-sans antialiased">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-django-green focus:text-white focus:rounded-md">
+      Skip to main content
+    </a>
+
+    {% include "partials/_nav.html" %}
+
+    <main id="main-content">
+      {% if messages %}
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+          {% for message in messages %}
+            <div class="rounded-md p-4 mb-4
+              {% if message.tags == 'success' %}bg-django-green-pale text-django-green-dark border border-django-green-light
+              {% else %}bg-yellow-50 text-yellow-800 border border-yellow-200{% endif %}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% block content %}{% endblock %}
+    </main>
+
+    {% include "partials/_footer.html" %}
+
+    {% if debug %}
+      {% load django_browser_reload %}
+      {% django_browser_reload_script %}
+    {% endif %}
+  </body>
+</html>

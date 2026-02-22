@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Donate{% endblock %}
+{% block meta_description %}Support DEFNA and help keep Django events accessible to everyone. Your donation funds diversity tickets, financial aid, and community event grants.{% endblock %}
+
+{% block content %}
+
+{# ── Hero ── #}
+<section class="bg-django-green text-white overflow-hidden">
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="flex justify-end">
+      <div class="w-full max-w-[640px] px-4 sm:px-6 lg:px-8 py-20 lg:py-28 flex flex-col justify-center">
+        <p class="text-django-green-light text-sm font-semibold uppercase tracking-widest mb-4">Support DEFNA</p>
+        <h1 class="text-4xl sm:text-5xl font-bold max-w-2xl leading-tight">Help keep Django events accessible to everyone</h1>
+        <p class="mt-6 text-lg text-gray-200 max-w-xl leading-relaxed">
+          Every donation — large or small — helps fund diversity tickets, financial aid, and community event grants that make the Django ecosystem more welcoming.
+        </p>
+        <a href="#donate-now"
+           class="mt-8 inline-flex items-center px-6 py-3 rounded-md bg-defna-gold hover:bg-defna-gold-dark text-white font-semibold transition-colors shadow-sm w-fit">
+          Donate Now
+        </a>
+      </div>
+    </div>
+
+    <div class="relative hidden lg:block min-h-[540px]">
+      <img src="{% static 'images/home-2.jpg' %}"
+           alt="Django community"
+           class="absolute inset-0 w-full h-full object-cover object-center">
+    </div>
+  </div>
+</section>
+
+{# ── Impact stats ── #}
+<section class="bg-django-green-pale border-b border-django-green-light/20 py-10" aria-label="Impact">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <dl class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+      <div>
+        <dt class="text-sm font-medium text-text-muted uppercase tracking-widest">Years Active</dt>
+        <dd class="mt-1 text-3xl font-bold text-django-green">10+</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-medium text-text-muted uppercase tracking-widest">DjangoCon US Editions</dt>
+        <dd class="mt-1 text-3xl font-bold text-django-green">11+</dd>
+      </div>
+      <div>
+        <dt class="text-sm font-medium text-text-muted uppercase tracking-widest">Community Grants Awarded</dt>
+        <dd class="mt-1 text-3xl font-bold text-django-green">20+</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+{# ── Where your money goes ── #}
+<section class="py-16 lg:py-20" aria-labelledby="impact-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 id="impact-heading" class="text-3xl font-bold text-text mb-2">Where your donation goes</h2>
+    <p class="text-text-muted mb-10 max-w-xl">DEFNA is a volunteer-run nonprofit. Donations go directly to programs that support the Django community.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+        <div class="w-10 h-10 rounded-lg bg-django-green-pale flex items-center justify-center mb-4" aria-hidden="true">
+          <svg class="w-5 h-5 text-django-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-text">Diversity Tickets</h3>
+        <p class="mt-2 text-sm text-text-muted leading-relaxed">
+          We fund reduced-price and free tickets to DjangoCon US for attendees from underrepresented groups, making the conference accessible to more people.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+        <div class="w-10 h-10 rounded-lg bg-django-green-pale flex items-center justify-center mb-4" aria-hidden="true">
+          <svg class="w-5 h-5 text-django-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-text">Financial Aid</h3>
+        <p class="mt-2 text-sm text-text-muted leading-relaxed">
+          Travel and accommodation grants help speakers and attendees who couldn't otherwise afford to participate in DjangoCon US.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+        <div class="w-10 h-10 rounded-lg bg-django-green-pale flex items-center justify-center mb-4" aria-hidden="true">
+          <svg class="w-5 h-5 text-django-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-text">Community Event Grants</h3>
+        <p class="mt-2 text-sm text-text-muted leading-relaxed">
+          Grants of up to $300 help community members organise their own Django events across North America, growing the ecosystem locally.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── Suggested tiers ── #}
+<section id="donate-now" class="py-16 lg:py-20 bg-surface-alt border-t border-gray-100" aria-labelledby="tiers-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 id="tiers-heading" class="text-3xl font-bold text-text mb-2">Choose an amount</h2>
+    <p class="text-text-muted mb-10">Every dollar makes a difference. Select a suggested amount or give any amount you choose.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm text-center hover:border-django-green-light hover:shadow-md transition-all">
+        <p class="text-3xl font-bold text-django-green mb-1">$25</p>
+        <p class="text-sm font-semibold text-text mb-2">Supporter</p>
+        <p class="text-xs text-text-muted leading-relaxed">Contributes toward a diversity ticket at DjangoCon US.</p>
+      </div>
+
+      <div class="bg-white rounded-xl border-2 border-django-green p-6 shadow-md text-center relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-xs font-semibold bg-django-green text-white">Popular</span>
+        <p class="text-3xl font-bold text-django-green mb-1">$50</p>
+        <p class="text-sm font-semibold text-text mb-2">Friend</p>
+        <p class="text-xs text-text-muted leading-relaxed">Helps fund speaker travel and financial aid grants.</p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm text-center hover:border-django-green-light hover:shadow-md transition-all">
+        <p class="text-3xl font-bold text-django-green mb-1">$100</p>
+        <p class="text-sm font-semibold text-text mb-2">Patron</p>
+        <p class="text-xs text-text-muted leading-relaxed">Covers a third of a community event grant.</p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm text-center hover:border-django-green-light hover:shadow-md transition-all">
+        <p class="text-3xl font-bold text-django-green mb-1">$250</p>
+        <p class="text-sm font-semibold text-text mb-2">Champion</p>
+        <p class="text-xs text-text-muted leading-relaxed">Funds an entire community event grant on your own.</p>
+      </div>
+
+    </div>
+
+    {# Payment options #}
+    <h3 class="text-lg font-semibold text-text mb-4">Pay via</h3>
+    <div class="flex flex-col sm:flex-row gap-4">
+
+      <a href="https://www.paypal.com/donate?hosted_button_id=HWP5RJGP3FJZL"
+         target="_blank" rel="noopener noreferrer"
+         class="flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[#0070BA] hover:bg-[#005ea6] text-white font-semibold transition-colors shadow-sm">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M7.076 21.337H2.47a.641.641 0 01-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 00-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 6.082-8.558 6.082H9.825l-1.67 10.573h3.51a.56.56 0 00.554-.65l.23-1.46.518-3.272a.56.56 0 01.553-.473h.35c3.764 0 6.71-1.53 7.572-5.953.384-1.964.183-3.608-.82-4.56z"/>
+        </svg>
+        Donate via PayPal
+      </a>
+
+      <a href="https://cash.app/$defna"
+         target="_blank" rel="noopener noreferrer"
+         class="flex-1 flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[#00D64F] hover:bg-[#00b843] text-white font-semibold transition-colors shadow-sm">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm.562 14.994l-.077.464c-.045.274-.287.474-.565.474h-.027a.58.58 0 01-.574-.66l.078-.473c-1.006-.207-1.87-.713-2.404-1.389-.213-.269-.15-.655.138-.843l.523-.337a.59.59 0 01.809.152c.339.46.885.773 1.506.856l.34-2.064c-1.27-.327-2.658-.917-2.658-2.565 0-1.278.944-2.314 2.332-2.568l.079-.478A.576.576 0 0112.574 6h.027c.323 0 .573.271.573.598v.007l-.076.456c.867.166 1.64.596 2.12 1.18.226.275.176.677-.108.877l-.508.34a.589.589 0 01-.82-.14 2.074 2.074 0 00-1.283-.743l-.33 2.01c1.312.346 2.726.937 2.726 2.647 0 1.35-1.014 2.434-2.333 2.762z"/>
+        </svg>
+        Donate via Cash App
+      </a>
+
+    </div>
+    <p class="mt-4 text-xs text-text-muted">Both options accept US credit and debit cards. Cash App is US-only; PayPal accepts international donations.</p>
+  </div>
+</section>
+
+{# ── FAQ ── #}
+<section class="py-16 lg:py-20 border-t border-gray-100" aria-labelledby="faq-heading">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 id="faq-heading" class="text-2xl font-bold text-text mb-8">Frequently Asked Questions</h2>
+
+    <dl class="space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <dt class="font-semibold text-text" itemprop="name">Is DEFNA a registered nonprofit?</dt>
+        <dd class="mt-2 text-sm text-text-muted leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Yes. DEFNA is a California-based nonprofit organisation, established in 2015.</span>
+        </dd>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <dt class="font-semibold text-text" itemprop="name">Are donations tax-deductible?</dt>
+        <dd class="mt-2 text-sm text-text-muted leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Please consult a tax professional regarding your specific situation. Contact us if you need documentation of your donation.</span>
+        </dd>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <dt class="font-semibold text-text" itemprop="name">Can I donate from outside the US?</dt>
+        <dd class="mt-2 text-sm text-text-muted leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Yes — PayPal accepts international credit and debit cards. Cash App is available for US donors only.</span>
+        </dd>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <dt class="font-semibold text-text" itemprop="name">Can I donate anonymously?</dt>
+        <dd class="mt-2 text-sm text-text-muted leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Yes. Both PayPal and Cash App allow you to complete a donation without us publicly identifying you.</span>
+        </dd>
+      </div>
+
+      <div class="bg-white rounded-xl border border-gray-100 p-6 shadow-sm" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <dt class="font-semibold text-text" itemprop="name">Can my company sponsor DEFNA?</dt>
+        <dd class="mt-2 text-sm text-text-muted leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Absolutely. Corporate sponsorships are a great way to support the Django community. <a href="{% url 'contact' %}?subject=sponsorship" class="text-django-green underline hover:no-underline">Get in touch</a> to discuss sponsorship options.</span>
+        </dd>
+      </div>
+
+    </dl>
+  </div>
+</section>
+
+{% endblock %}

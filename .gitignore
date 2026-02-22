@@ -140,3 +140,6 @@ cython_debug/
 
 # Custom compose options
 compose.override.yml
+
+#macos
+.DS_Store

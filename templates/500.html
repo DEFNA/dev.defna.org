@@ -1,23 +1,20 @@
+{% load tailwind_cli %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DEFNA - Server Error</title>
-    <style>
-      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background-color: #f9fafb; color: #1f2937; }
-      .container { padding: 2rem; text-align: center; }
-      h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
-      p { font-size: 1.25rem; color: #6b7280; margin-bottom: 1rem; }
-      a { color: #2563eb; text-decoration: none; }
-      a:hover { text-decoration: underline; }
-    </style>
+    <title>Server Error — DEFNA</title>
+    {% tailwind_css %}
   </head>
-  <body>
-    <div class="container">
-      <h1>500</h1>
-      <p>Server Error</p>
-      <a href="/">Go Home</a>
+  <body class="flex justify-center items-center min-h-screen font-sans antialiased bg-surface text-text">
+    <div class="px-4 text-center">
+      <p class="text-7xl font-bold text-django-green-pale">500</p>
+      <h1 class="mt-4 text-2xl font-bold">Something went wrong</h1>
+      <p class="mt-3 text-text-muted">We're aware of the issue and working to fix it.</p>
+      <a href="/" class="inline-flex items-center py-2.5 px-5 mt-8 text-sm font-semibold text-white rounded-md transition-colors bg-django-green hover:bg-django-green-dark">
+        Go to the homepage
+      </a>
     </div>
   </body>
 </html>

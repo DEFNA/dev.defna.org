@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+{% block meta_description %}Contact the DEFNA team — mailing address, phone, and email for general and DjangoCon US inquiries.{% endblock %}
+
+{% block content %}
+
+{# ── Page header ── #}
+<section class="bg-django-green text-white overflow-hidden">
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="flex justify-end">
+      <div class="w-full max-w-[640px] px-4 sm:px-6 lg:px-8 py-20 lg:py-28 flex flex-col justify-center">
+        <p class="text-django-green-light text-sm font-semibold uppercase tracking-widest mb-4">Get in Touch</p>
+        <h1 class="text-4xl sm:text-5xl font-bold leading-tight">Contact our Team</h1>
+        <p class="mt-6 text-lg text-gray-200 leading-relaxed max-w-xl">
+          Reach DEFNA for board, grants, sponsorship, and DjangoCon US inquiries. We’re here to help connect you to the right team.
+        </p>
+      </div>
+    </div>
+
+    <div class="relative hidden lg:block min-h-[540px]">
+      <img src="{% static 'images/home.jpg' %}"
+           alt="DjangoCon US community"
+           class="absolute inset-0 w-full h-full object-cover object-center">
+    </div>
+  </div>
+</section>
+
+{# ── Contact cards ── #}
+<section class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {# DEFNA wordmark #}
+    <div class="mb-12">
+      <p class="text-3xl font-bold tracking-tight text-django-green">DEFNA</p>
+      <p class="text-sm font-medium uppercase tracking-widest text-text-muted mt-0.5">Django Events Foundation North America</p>
+    </div>
+
+    {# Card grid — inspired by happyhues "Color terminology" solid-block layout #}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+
+      {# Card 1 — Mailing address (dark, spans full height) #}
+      <div class="bg-django-green text-white p-10 flex flex-col justify-between min-h-64">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-django-green-light mb-6">Mailing Address</p>
+          <address class="not-italic text-lg font-medium leading-relaxed">
+            3141 Stevens Creek Blvd #40102<br>
+            San Jose, CA 95117<br>
+            U.S.A.
+          </address>
+        </div>
+        <a href="tel:+14152952728"
+           class="mt-8 inline-block text-sm font-semibold text-django-green-light hover:text-white transition-colors">
+          +1 (415) 295-2728
+        </a>
+      </div>
+
+      {# Card 2 — General email #}
+      <div class="bg-surface-alt p-10 flex flex-col justify-between min-h-64">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-django-green mb-6">Email</p>
+          <p class="text-sm font-medium text-django-green-dark mb-2">General inquiries</p>
+          <a href="mailto:hello@defna.org"
+             class="text-2xl font-bold text-django-green-dark hover:text-django-green transition-colors break-all">
+            hello@defna.org
+          </a>
+        </div>
+        <p class="mt-8 text-sm text-django-green-dark/60">Board, grants, sponsorship &amp; general questions</p>
+      </div>
+
+      {# Card 3 — DjangoCon email #}
+      <div class="bg-django-green text-white p-10 flex flex-col justify-between min-h-64">
+        <div>
+          <p class="text-xs font-semibold uppercase  text-django-green-light tracking-widest mb-6">DjangoCon US</p>
+          <p class="text-sm font-medium mb-2">Conference inquiries</p>
+          <a href="mailto:hello@djangocon.us"
+             class="text-2xl font-bold hover:text-white transition-colors break-all">hello@djangocon.us
+          </a>
+        </div>
+        <p class="mt-8 text-sm text-django-green-light">Speaking, sponsorship &amp; DjangoCon US questions</p>
+      </div>
+
+    </div>
+
+    {# Legal notices — below cards, full width #}
+    <div class="mt-16 pt-10 border-t border-django-green-light/20 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-text-muted leading-relaxed">
+      <p>
+        Use of the terms "Django" and "DjangoCon", and the Django logo, are governed by the
+        <a href="https://www.djangoproject.com/trademarks/" target="_blank" rel="noopener noreferrer"
+           class="text-django-green underline hover:no-underline">Django Software Foundation</a>.
+      </p>
+      <p>
+        "Django Events Foundation North America", "DEFNA", and the DEFNA logo are the property of
+        Django Events Foundation North America.<br>
+        <span class="mt-1 block">Django Events Foundation North America (DEFNA) &copy; 2015–2026</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

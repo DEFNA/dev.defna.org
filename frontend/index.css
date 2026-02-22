@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* ─── Happy Hues Palette 10 ───────────────────────────────────────────────── */
+/* https://www.happyhues.co/palettes/10                                        */
+
+@theme {
+  /* Primary (dark teal) section */
+  --color-django-green: #004643;          /* primary bg / dark sections        */
+  --color-django-green-dark: #001e1d;     /* deepest dark, hover on primary     */
+  --color-django-green-light: #abd1c6;    /* sage — paragraph on dark, accents  */
+  --color-django-green-pale: #e8e4e6;     /* off-white — tertiary section bg    */
+
+  /* Button / accent */
+  --color-defna-gold: #f9bc60;            /* warm gold — CTA buttons            */
+  --color-defna-gold-dark: #e8a840;       /* slightly darker gold for hover     */
+
+  /* Page surfaces */
+  --color-surface: #e8e4e6;              /* page background (off-white/neutral) */
+  --color-surface-alt: #abd1c6;          /* secondary section teal-sage bg      */
+
+  /* Typography */
+  --color-text: #001e1d;                  /* body text (deepest dark)           */
+  --color-text-muted: #0f3433;            /* sub-headline / muted on light bg   */
+
+  /* Tertiary / error accent */
+  --color-accent-red: #e16162;            /* coral — error states, badges       */
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
