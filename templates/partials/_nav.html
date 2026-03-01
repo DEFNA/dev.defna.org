@@ -5,7 +5,7 @@
 
       {# Logo #}
       <a href="{% url 'home' %}" class="flex items-center shrink-0">
-        <img src="{% static 'images/DEFNA-Logotype.png' %}" alt="DEFNA – Django Events Foundation North America" class="h-8 w-auto max-w-[140px] sm:h-10 sm:max-w-none">
+        <img src="{% static 'images/DEFNA-Logotype.png' %}" alt="DEFNA – Django Events Foundation North America" class="w-auto h-8 sm:max-w-none sm:h-10 max-w-[140px]">
       </a>
 
       {# Desktop nav #}
@@ -91,7 +91,7 @@
       <a href="{% url 'grants' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Grants</a>
       <a href="{% url 'contact' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Contact</a>
       <div class="pt-2">
-        <a href="{% url 'donate' %}" class="flex justify-center items-center py-3 px-4 text-sm font-semibold text-center text-white rounded-md min-h-11 transition-colors bg-defna-gold hover:bg-defna-gold-dark">Donate</a>
+        <a href="{% url 'donate' %}" class="flex justify-center items-center py-3 px-4 text-sm font-semibold text-center text-white rounded-md transition-colors min-h-11 bg-defna-gold hover:bg-defna-gold-dark">Donate</a>
       </div>
     </div>
   </nav>

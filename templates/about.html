@@ -6,8 +6,11 @@
 {% block meta_description %}Learn about DEFNA — our mission, history, and the board members who keep the Django community thriving.{% endblock %}
 
 {% block og_title %}About DEFNA — Django Events Foundation North America{% endblock %}
+
 {% block og_description %}Learn about DEFNA's mission, history, and the board of directors who support the Django community across North America through DjangoCon US and community grants.{% endblock %}
+
 {% block og_image %}{% static 'images/defna.jpg' %}{% endblock %}
+
 {% block og_image_alt %}DEFNA board members and community{% endblock %}
 
 {% block content %}
@@ -216,7 +219,7 @@
                   alt="Director placeholder photo"
                   class="object-cover object-top absolute inset-0 w-full h-full opacity-60 transition-all duration-500 group-hover:opacity-75 grayscale group-hover:grayscale-0">
           {# Gradient overlay at bottom of photo #}
-                <div class="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t to-transparent from-black/60"></div>
+                <div class="absolute inset-x-0 bottom-0 h-24 to-transparent bg-linear-to-t from-black/60"></div>
           {# Role badge pinned to bottom of photo #}
                 <span class="absolute bottom-4 left-4 py-1 px-3 text-xs font-semibold text-white rounded-full shadow bg-django-green">
                   {{ role }}

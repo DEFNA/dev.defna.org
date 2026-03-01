@@ -1,4 +1,4 @@
-{% load tailwind_cli static %}
+{% load static tailwind_cli %}
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -35,7 +35,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{% static 'images/favicon/ms-icon-144x144.png' %}">
   </head>
-  <body class="font-sans antialiased bg-surface text-text overflow-x-hidden">
+  <body class="overflow-x-hidden font-sans antialiased bg-surface text-text">
 
     <a href="#main-content" class="sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:py-2 focus:px-4 focus:text-white focus:rounded-md focus:not-sr-only focus:bg-django-green">
       Skip to main content
