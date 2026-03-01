@@ -1,4 +1,4 @@
-{% load tailwind_cli %}
+{% load tailwind_cli static %}
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -6,13 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% block meta_description %}Django Events Foundation North America — supporting the Django community through DjangoCon US, grants, and sponsored events.{% endblock %}">
     <title>{% block title %}DEFNA{% endblock %} — Django Events Foundation North America</title>
+    {# Open Graph / Social Preview #}
+    <meta property="og:site_name" content="DEFNA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:title" content="{% block og_title %}DEFNA — Django Events Foundation North America{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Django Events Foundation North America — supporting the Django community through DjangoCon US, grants, and sponsored events since 2015.{% endblock %}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% block og_image %}{% static 'images/home.jpg' %}{% endblock %}">
+    <meta property="og:image:alt" content="{% block og_image_alt %}DEFNA community at DjangoCon US{% endblock %}">
+    <meta property="og:locale" content="en_US">
+    {# Twitter Card — Twitter inherits og: tags for title, description, and image #}
+    <meta name="twitter:card" content="summary_large_image">
     {% tailwind_css %}
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
-    <link rel="manifest" href="/static/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'images/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'images/favicon/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/favicon/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/favicon/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/favicon/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'images/favicon/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/favicon/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/favicon/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'images/favicon/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon/favicon.ico' %}">
+    <link rel="manifest" href="{% static 'images/favicon/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'images/favicon/ms-icon-144x144.png' %}">
   </head>
-  <body class="font-sans antialiased bg-surface text-text">
+  <body class="font-sans antialiased bg-surface text-text overflow-x-hidden">
 
     <a href="#main-content" class="sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:py-2 focus:px-4 focus:text-white focus:rounded-md focus:not-sr-only focus:bg-django-green">
       Skip to main content

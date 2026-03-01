@@ -5,6 +5,11 @@
 
 {% block meta_description %}Contact the DEFNA team — mailing address, phone, and email for general and DjangoCon US inquiries.{% endblock %}
 
+{% block og_title %}Contact DEFNA — Django Events Foundation North America{% endblock %}
+{% block og_description %}Reach the DEFNA team for board, grants, sponsorship, and DjangoCon US inquiries. Mailing address, phone, and email contacts.{% endblock %}
+{% block og_image %}{% static 'images/home.jpg' %}{% endblock %}
+{% block og_image_alt %}DjangoCon US community{% endblock %}
+
 {% block content %}
 
 {# ── Page header ── #}
@@ -42,7 +47,7 @@
       <div class="grid grid-cols-1 gap-0 md:grid-cols-2 lg:grid-cols-3">
 
       {# Card 1 — Mailing address (dark, spans full height) #}
-        <div class="flex flex-col justify-between p-10 text-white bg-django-green min-h-64">
+        <div class="flex flex-col justify-between p-6 text-white sm:p-10 bg-django-green min-h-64">
           <div>
             <p class="mb-6 text-xs font-semibold tracking-widest uppercase text-django-green-light">Mailing Address</p>
             <address class="text-lg not-italic font-medium leading-relaxed">
@@ -58,12 +63,12 @@
         </div>
 
       {# Card 2 — General email #}
-        <div class="flex flex-col justify-between p-10 bg-surface-alt min-h-64">
+        <div class="flex flex-col justify-between p-6 sm:p-10 bg-surface-alt min-h-64">
           <div>
             <p class="mb-6 text-xs font-semibold tracking-widest uppercase text-django-green">Email</p>
             <p class="mb-2 text-sm font-medium text-django-green-dark">General inquiries</p>
             <a href="mailto:hello@defna.org"
-               class="text-2xl font-bold break-all transition-colors text-django-green-dark hover:text-django-green">
+               class="text-xl font-bold break-all transition-colors sm:text-2xl text-django-green-dark hover:text-django-green">
               hello@defna.org
             </a>
           </div>
@@ -71,12 +76,12 @@
         </div>
 
       {# Card 3 — DjangoCon email #}
-        <div class="flex flex-col justify-between p-10 text-white bg-django-green min-h-64">
+        <div class="flex flex-col justify-between p-6 text-white sm:p-10 bg-django-green min-h-64">
           <div>
             <p class="mb-6 text-xs font-semibold tracking-widest uppercase text-django-green-light">DjangoCon US</p>
             <p class="mb-2 text-sm font-medium">Conference inquiries</p>
             <a href="mailto:hello@djangocon.us"
-               class="text-2xl font-bold break-all transition-colors hover:text-white">hello@djangocon.us
+               class="text-xl font-bold break-all transition-colors sm:text-2xl hover:text-white">hello@djangocon.us
             </a>
           </div>
           <p class="mt-8 text-sm text-django-green-light">Speaking, sponsorship &amp; DjangoCon US questions</p>

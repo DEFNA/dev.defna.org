@@ -4,6 +4,11 @@
 
 {% block meta_description %}DEFNA offers grants of up to $300 to help community members organise Django-related events across North America.{% endblock %}
 
+{% block og_title %}Grants Program — DEFNA{% endblock %}
+{% block og_description %}DEFNA awards grants of up to $300 to support Django-related events and educational initiatives across North America. Apply for community funding today.{% endblock %}
+{% block og_image %}{% static 'images/grants.jpg' %}{% endblock %}
+{% block og_image_alt %}Django community members at a grant-sponsored event{% endblock %}
+
 {% block content %}
 
 {# ── Page header ── #}
@@ -133,6 +138,16 @@
                   <p class="mt-0.5 text-xs text-text-muted">A board member will contact you to discuss next steps and confirm the grant.</p>
                 </div>
               </li>
+              <li class="flex gap-4">
+                <span class="flex justify-center items-center w-7 h-7 text-sm font-bold text-white rounded-full bg-django-green shrink-0">4</span>
+                <div>
+                  <p class="text-sm font-medium text-text">Once the grant is approved</p>
+                  <p class="mt-0.5 text-xs text-text-muted">Once the grant is approved and funds are released, please
+                    <a href="https://forms.gle/88po8sxoJuWWn8xQ6" target="_blank" rel="noopener noreferrer" class="text-django-green underline hover:text-django-green-dark">fill out this form</a>
+                    for our records.
+                  </p>
+                </div>
+              </li>
             </ol>
 
             <div class="pt-5 mt-6 border-t border-django-green-light/30">
@@ -198,7 +213,7 @@
   <div class="w-full">
     <img src="{% static 'images/grants.jpg' %}"
          alt="Django community"
-         class="object-cover object-center -mb-20 w-full h-[800px]">
+         class="object-cover object-center -mb-20 w-full h-48 sm:h-80 lg:h-[600px] xl:h-[800px]">
   </div>
 
 {% endblock content %}

@@ -4,11 +4,8 @@
     <div class="flex justify-between items-center h-16">
 
       {# Logo #}
-      <a href="{% url 'home' %}" class="flex gap-2 items-center shrink-0">
-        <span class="text-xl font-bold tracking-tight text-django-green">DEFNA</span>
-        <span class="hidden text-xs font-medium leading-tight sm:block text-text-muted max-w-[160px]">
-          Django Events Foundation<br>North America
-        </span>
+      <a href="{% url 'home' %}" class="flex items-center shrink-0">
+        <img src="{% static 'images/DEFNA-Logotype.png' %}" alt="DEFNA – Django Events Foundation North America" class="h-8 w-auto max-w-[140px] sm:h-10 sm:max-w-none">
       </a>
 
       {# Desktop nav #}
@@ -70,7 +67,7 @@
 
       {# Mobile menu button #}
       <button id="mobile-menu-btn"
-              class="p-2 text-gray-500 rounded-md transition-colors md:hidden hover:text-django-green hover:bg-django-green-pale"
+              class="p-2.5 text-gray-500 rounded-md transition-colors md:hidden hover:text-django-green hover:bg-django-green-pale"
               aria-controls="mobile-menu" aria-expanded="false">
         <span class="sr-only">Open menu</span>
         <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -83,18 +80,18 @@
     </div>
 
     {# Mobile menu #}
-    <div id="mobile-menu" class="hidden pt-3 pb-4 space-y-1 border-t border-gray-100 md:hidden">
-      <a href="{% url 'home' %}" class="block py-2 px-3 text-sm font-medium text-gray-700 rounded-md hover:text-django-green hover:bg-django-green-pale">Home</a>
-      <a href="{% url 'about' %}" class="block py-2 px-3 text-sm font-medium text-gray-700 rounded-md hover:text-django-green hover:bg-django-green-pale">About</a>
+    <div id="mobile-menu" class="hidden pt-2 pb-4 space-y-0.5 border-t border-gray-100 md:hidden">
+      <a href="{% url 'home' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Home</a>
+      <a href="{% url 'about' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">About</a>
       <div class="pl-3">
         <p class="py-1 px-3 text-xs font-semibold tracking-widest uppercase text-text-muted">Events</p>
-        <a href="{% url 'djangocon' %}" class="block py-2 px-3 text-sm font-medium text-gray-700 rounded-md hover:text-django-green hover:bg-django-green-pale">DjangoCon US</a>
-        <a href="{% url 'sponsored-events' %}" class="block py-2 px-3 text-sm font-medium text-gray-700 rounded-md hover:text-django-green hover:bg-django-green-pale">Sponsored Events</a>
+        <a href="{% url 'djangocon' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">DjangoCon US</a>
+        <a href="{% url 'sponsored-events' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Sponsored Events</a>
       </div>
-      <a href="{% url 'grants' %}" class="block py-2 px-3 text-sm font-medium text-gray-700 rounded-md hover:text-django-green hover:bg-django-green-pale">Grants</a>
-      <a href="{% url 'contact' %}" class="block py-2 px-3 text-sm font-medium text-gray-700 rounded-md hover:text-django-green hover:bg-django-green-pale">Contact</a>
+      <a href="{% url 'grants' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Grants</a>
+      <a href="{% url 'contact' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Contact</a>
       <div class="pt-2">
-        <a href="{% url 'donate' %}" class="block py-2 px-4 text-sm font-semibold text-center text-white rounded-md transition-colors bg-defna-gold hover:bg-defna-gold-dark">Donate</a>
+        <a href="{% url 'donate' %}" class="flex justify-center items-center py-3 px-4 text-sm font-semibold text-center text-white rounded-md min-h-11 transition-colors bg-defna-gold hover:bg-defna-gold-dark">Donate</a>
       </div>
     </div>
   </nav>

@@ -5,6 +5,11 @@
 
 {% block meta_description %}Django Events Foundation North America — supporting the Django community through DjangoCon US, grants, and sponsored events since 2015.{% endblock %}
 
+{% block og_title %}DEFNA — Django Events Foundation North America{% endblock %}
+{% block og_description %}Django Events Foundation North America: supporting the Django community through DjangoCon US, grants, and sponsored events across North America since 2015.{% endblock %}
+{% block og_image %}{% static 'images/home.jpg' %}{% endblock %}
+{% block og_image_alt %}DjangoCon US community gathering{% endblock %}
+
 {% block content %}
 
 {# ── Hero ── #}
@@ -163,6 +168,6 @@
   <div class="w-full">
     <img src="{% static 'images/home-2.jpg' %}"
          alt="Django community"
-         class="object-cover object-center -mb-20 w-full h-[800px]">
+         class="object-cover object-center -mb-20 w-full h-48 sm:h-80 lg:h-[600px] xl:h-[800px]">
   </div>
 {% endblock content %}

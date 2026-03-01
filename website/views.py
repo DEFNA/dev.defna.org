@@ -60,10 +60,8 @@ class DonateView(TemplateView):
 
 GRANT_ELIGIBILITY = [
     "The event must be Django-related (meetup, workshop, conference, or sprint).",
-    "The event must take place in North America.",
-    "The organiser must be a member of the Django community.",
     "Events of all sizes are welcome — from small local meetups to regional conferences.",
-    "Grant funds must be used for event costs (venue, catering, materials, or promotion).",
+    "Grant funds must be used for event costs.",
 ]
 
 

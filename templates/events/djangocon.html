@@ -5,6 +5,11 @@
 
 {% block meta_description %}DjangoCon US is the annual conference for the North American Django community, organised by DEFNA since 2015.{% endblock %}
 
+{% block og_title %}DjangoCon US — DEFNA{% endblock %}
+{% block og_description %}DjangoCon US is the largest annual gathering of the Django community in North America, organised and sponsored by DEFNA since 2015.{% endblock %}
+{% block og_image %}{% static 'images/djangocon.jpg' %}{% endblock %}
+{% block og_image_alt %}DjangoCon US conference attendees{% endblock %}
+
 {% block content %}
 
 {# ── Page header ── #}
@@ -108,7 +113,7 @@
           </div>
         </a>
 
-        <a href="{% url 'contact' %}?subject=sponsorship"
+        <a href="mailto:sponsors@djangocon.us"
            class="flex gap-4 items-start p-5 bg-white rounded-xl border shadow-sm transition-all hover:shadow-md group border-django-green-light/20 hover:border-django-green">
           <div class="flex justify-center items-center w-10 h-10 rounded-lg transition-colors bg-django-green-pale shrink-0 group-hover:bg-django-green">
             <svg class="w-5 h-5 transition-colors group-hover:text-white text-django-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -426,7 +431,7 @@
   <div class="w-full">
     <img src="{% static 'images/djangocon.jpg' %}"
          alt="Django community"
-         class="object-cover object-center -mb-20 w-full h-[800px]">
+         class="object-cover object-center -mb-20 w-full h-48 sm:h-80 lg:h-[600px] xl:h-[800px]">
   </div>
 
 {% endblock content %}
