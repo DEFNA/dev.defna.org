@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from markdownx.models import MarkdownxField
+from django.urls import reverse
 
 
 class Announcement(models.Model):
@@ -28,6 +30,7 @@ class BoardMember(models.Model):
     bluesky_url = models.URLField(blank=True, verbose_name="Bluesky URL")
     website_url = models.URLField(blank=True, verbose_name="Website URL")
     is_current = models.BooleanField(default=True)
+    is_emeritus = models.BooleanField(default=False, help_text="Honour past members who went above and beyond.")
     order = models.PositiveSmallIntegerField(default=0)
 
     class Meta:
@@ -76,6 +79,27 @@ class SponsoredEvent(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.location})"
+
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(unique=True)
+    excerpt = models.TextField(help_text="Short summary shown in the post listing.")
+    body = MarkdownxField()
+    author = models.CharField(max_length=100, blank=True)
+    cover_image = models.ImageField(upload_to="blog/", blank=True)
+    published_at = models.DateTimeField(default=timezone.now)
+    is_published = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["-published_at"]
+        verbose_name = "Blog Post"
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse("blog-detail", kwargs={"slug": self.slug})
 
 
 class GrantCycle(models.Model):

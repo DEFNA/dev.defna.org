@@ -1,6 +1,7 @@
 from django.contrib import admin
+from markdownx.admin import MarkdownxModelAdmin
 
-from website.models import Announcement, BoardMember, DjangoConEdition, GrantCycle, SponsoredEvent
+from website.models import Announcement, BlogPost, BoardMember, DjangoConEdition, GrantCycle, SponsoredEvent
 
 
 @admin.register(Announcement)
@@ -14,9 +15,9 @@ class AnnouncementAdmin(admin.ModelAdmin):
 
 @admin.register(BoardMember)
 class BoardMemberAdmin(admin.ModelAdmin):
-    list_display = ["name", "role", "is_current", "order"]
-    list_editable = ["order", "is_current"]
-    list_filter = ["is_current"]
+    list_display = ["name", "role", "is_current", "is_emeritus", "order"]
+    list_editable = ["order", "is_current", "is_emeritus"]
+    list_filter = ["is_current", "is_emeritus"]
     search_fields = ["name", "role"]
 
 
@@ -34,6 +35,16 @@ class SponsoredEventAdmin(admin.ModelAdmin):
     list_editable = ["is_published"]
     date_hierarchy = "event_date"
     search_fields = ["name", "organizer", "location"]
+
+
+@admin.register(BlogPost)
+class BlogPostAdmin(MarkdownxModelAdmin):
+    list_display = ["title", "author", "published_at", "is_published"]
+    list_filter = ["is_published"]
+    list_editable = ["is_published"]
+    prepopulated_fields = {"slug": ("title",)}
+    date_hierarchy = "published_at"
+    search_fields = ["title", "excerpt", "body", "author"]
 
 
 @admin.register(GrantCycle)

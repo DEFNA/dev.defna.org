@@ -1,0 +1,343 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Host DjangoCon US{% endblock %}
+
+{% block meta_description %}Want your city to host DjangoCon US? Here's what DEFNA needs to know to consider your venue proposal.{% endblock %}
+
+{% block og_title %}Host DjangoCon US — DEFNA{% endblock %}
+
+{% block og_description %}Interested in bringing DjangoCon US to your city? Read our venue host requirements and submit your proposal to DEFNA.{% endblock %}
+
+{% block og_image %}{% static 'images/djangocon.jpg' %}{% endblock %}
+
+{% block og_image_alt %}DjangoCon US attendees at a conference venue{% endblock %}
+
+{% block content %}
+
+{# ── Page header ── #}
+  <section class="overflow-hidden text-white bg-django-green">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="flex justify-end">
+        <div class="flex flex-col justify-center py-20 px-4 w-full sm:px-6 lg:py-28 lg:px-8 max-w-[640px]">
+          <p class="mb-4 text-sm font-semibold tracking-widest uppercase text-django-green-light">DjangoCon US</p>
+          <h1 class="text-4xl font-bold leading-tight sm:text-5xl">Host DjangoCon US</h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-gray-200">
+            So you want your city to host DjangoCon US? Hurrah! We're delighted by your interest. Here's what you need to know — and what we need to know — to consider your proposal.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative min-h-[260px] sm:min-h-[340px] lg:min-h-[540px]">
+        <img src="{% static 'images/djangocon.jpg' %}"
+             alt="DjangoCon US conference"
+             class="object-cover object-center absolute inset-0 w-full h-full">
+      </div>
+    </div>
+  </section>
+
+{# ── Intro ── #}
+  <section class="py-16 lg:py-20">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+
+        <div class="space-y-4 leading-relaxed lg:col-span-2 text-text-muted">
+          <p>
+            We need some information about your city, the venue, the hotel, and travel. Your proposal doesn't have to be super-fancy — just informative. Read through the requirements below and get in touch when you're ready.
+          </p>
+          <div class="p-4 rounded-lg border border-gray-200 bg-surface-alt">
+            <p class="text-sm font-semibold text-text">Important</p>
+            <p class="mt-1 text-sm text-text-muted">
+              Since we are considering a number of proposals, no one from your group should sign a binding contract or make any kind of legal or financial commitment. DEFNA will handle the business side of things. If DEFNA chooses your proposal, your group is responsible for putting DEFNA in contact with venue management to finalise the event agreement.
+            </p>
+          </div>
+        </div>
+
+      {# Quick-nav sidebar #}
+        <aside>
+          <div class="p-6 rounded-xl border bg-django-green-pale border-django-green-light/30">
+            <h2 class="mb-4 font-bold text-django-green">What We Need</h2>
+            <nav>
+              <ul class="space-y-2 text-sm">
+                <li><a href="#organizers" class="underline text-django-green hover:text-django-green-dark">1. Local organizers</a></li>
+                <li><a href="#conference-venue" class="underline text-django-green hover:text-django-green-dark">2. Conference venue</a></li>
+                <li><a href="#sprint-venue" class="underline text-django-green hover:text-django-green-dark">3. Sprint venue</a></li>
+                <li><a href="#hotel" class="underline text-django-green hover:text-django-green-dark">4. Hotel</a></li>
+                <li><a href="#costs" class="underline text-django-green hover:text-django-green-dark">5. Attendee costs</a></li>
+                <li><a href="#city" class="underline text-django-green hover:text-django-green-dark">6. Why your city?</a></li>
+                <li><a href="#extras" class="underline text-django-green hover:text-django-green-dark">7. Extras</a></li>
+              </ul>
+            </nav>
+            <div class="pt-5 mt-6 border-t border-django-green-light/30">
+              <a href="mailto:hello@djangocon.us"
+                 class="block py-3 px-4 w-full text-sm font-semibold text-center text-white rounded-md shadow-sm transition-colors bg-django-green hover:bg-django-green-dark">
+                Submit Your Proposal
+              </a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+{# ── 1. Local organizers ── #}
+  <section id="organizers" class="py-16 border-t lg:py-20 border-django-green-light/20">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="mb-2 text-xs font-semibold tracking-widest uppercase text-django-green">Section 1</p>
+        <h2 class="mb-6 text-3xl font-bold text-text">Local Organizers</h2>
+        <div class="space-y-4 leading-relaxed text-text-muted">
+          <p>
+            While DEFNA will handle the business aspects of the conference, we need the help of a team of local volunteers to manage preparation and the onsite coordination of the event. We realise you won't have an entire team assembled, but let us know who the core organizers in your city will be.
+          </p>
+          <p>Include the names (and brief bios if available) of the key people who will be running things on the ground.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{# ── 2. Conference venue ── #}
+  <section id="conference-venue" class="py-16 border-t lg:py-20 border-django-green-light/20">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <p class="mb-2 text-xs font-semibold tracking-widest uppercase text-django-green">Section 2</p>
+      <h2 class="mb-6 text-3xl font-bold text-text">Conference Venue</h2>
+      <p class="mb-10 max-w-3xl leading-relaxed text-text-muted">
+        Provide a short list of possible conference venues (or just one, if you have found the Venue of Conference Dreams). For each venue include:
+      </p>
+
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+
+      {# Basic info #}
+        <div class="p-6 rounded-xl border border-gray-200 bg-django-green  ">
+          <h3 class="mb-4 text-lg font-bold text-white">Basic Information</h3>
+          <ul class="space-y-2">
+            {%  for item in venue_basic %}
+              <li class="flex gap-3 items-start text-sm text-white">
+                <svg class="mt-0.5 w-4 h-4 text-django-green-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                {{ item }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      {# Required spaces #}
+        <div class="p-6 rounded-xl border border-gray-200 bg-django-green ">
+          <h3 class="mb-4 text-lg font-bold text-white">Required Spaces</h3>
+          <p class="mb-3 text-xs text-white">A floorplan with a rough explanation of what will go where would be great.</p>
+          <ul class="space-y-2">
+            {% for item in venue_spaces %}
+              <li class="flex gap-3 items-start text-sm text-white">
+                <svg class="mt-0.5 w-4 h-4 text-django-green-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                {{ item }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      {# Catering #}
+        <div class="p-6 rounded-xl border border-gray-200 bg-django-green">
+          <h3 class="mb-4 text-lg font-bold text-white">Catering Requirements</h3>
+          <ul class="space-y-2">
+            {% for item in venue_catering %}
+              <li class="flex gap-3 items-start text-sm text-white">
+                <svg class="mt-0.5 w-4 h-4 text-django-green-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                {{ item }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      {# What makes a good venue #}
+        <div class="p-6 rounded-xl border border-gray-200 bg-surface-alt">
+          <h3 class="mb-4 text-lg font-bold text-django-green">What Makes a Good Venue</h3>
+          <ul class="space-y-2">
+            {% for item in venue_qualities %}
+              <li class="flex gap-3 items-start text-sm text-text-muted">
+                <svg class="mt-0.5 w-4 h-4 text-django-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                {{ item }}
+              </li>
+            {% endfor %}
+          </ul>
+          <p class="mt-4 text-xs text-text-muted">
+            The venue does not have to be a hotel or corporate conference center. Many universities offer conference services, and there are also municipal/county level event venues which can be likely sites for DjangoCon US.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+{# ── 3. Sprint venue ── #}
+  <section id="sprint-venue" class="py-16 border-t lg:py-20 border-django-green-light/20">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <div>
+          <p class="mb-2 text-xs font-semibold tracking-widest uppercase text-django-green">Section 3</p>
+          <h2 class="mb-6 text-3xl font-bold text-text">Sprint Venue</h2>
+          <p class="mb-6 leading-relaxed text-text-muted">
+            Provide a short list of possible sprint venues. For each include:
+          </p>
+          <ul class="space-y-2">
+            {% for item in sprint_basic %}
+              <li class="flex gap-3 items-start text-sm text-text-muted">
+                <svg class="mt-0.5 w-4 h-4 text-django-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                {{ item }}
+              </li>
+            {% endfor %}
+          </ul>
+          <p class="mt-4 text-sm leading-relaxed text-text-muted">
+            Also include information on any local companies that might be willing to host the sprints at no cost.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-django-green-light/30 bg-surface-alt">
+          <h3 class="mb-4 text-lg font-bold text-django-green">What Makes a Good Sprint Venue</h3>
+          <ul class="space-y-2">
+            {% for item in sprint_qualities %}
+              <li class="flex gap-3 items-start text-sm text-text-muted">
+                <svg class="mt-0.5 w-4 h-4 text-django-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                {{ item }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{# ── 4. Hotel ── #}
+  <section id="hotel" class="py-16 border-t lg:py-20 border-django-green-light/20">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <p class="mb-2 text-xs font-semibold tracking-widest uppercase text-django-green">Section 4</p>
+      <h2 class="mb-4 text-3xl font-bold text-text">Hotel</h2>
+      <p class="mb-10 max-w-3xl leading-relaxed text-text-muted">
+        The ideal hotel is adjacent to the conference venue, or a very short walk away. You can reach out to the event sales contact at the hotel to help gather the information we need.
+      </p>
+
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+
+        <div class="p-6 rounded-xl border border-gray-200 bg-django-green">
+          <h3 class="mb-4 text-lg font-bold text-white">Hotel Details to Include</h3>
+          <ul class="space-y-2">
+            {% for item in hotel_details %}
+              <li class="flex gap-3 items-start text-sm text-white">
+                <svg class="mt-0.5 w-4 h-4 text-django-green-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                {{ item }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-xl border border-gray-200 bg-surface-alt">
+          <h3 class="mb-4 text-lg font-bold text-text">Estimated Room Block</h3>
+          <p class="mb-4 text-sm text-text-muted">A block of rooms starting the two nights before tutorials, running through the last night of the sprints:</p>
+          <div class="overflow-hidden rounded-lg border border-gray-200">
+            <table class="w-full text-sm">
+              <thead class="text-xs font-semibold tracking-wider uppercase bg-gray-50 text-text-muted">
+                <tr>
+                  <th class="py-2 px-3 text-left">Night</th>
+                  <th class="py-2 px-3 text-right">Rooms</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100">
+                {% for night in hotel_room_block %}
+                  <tr class="{% if forloop.even %}bg-gray-50{% endif %}">
+                    <td class="py-2 px-3 text-text-muted">{{ night.night }}</td>
+                    <td class="py-2 px-3 font-medium text-right text-text">{{ night.rooms }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-4 text-xs text-text-muted">
+            Do not sign any contracts. DEFNA will handle the business side of things. We just need to see the terms the hotel proposes for the group block.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+{# ── 5. Attendee costs ── #}
+  <section id="costs" class="py-16 border-t lg:py-20 border-django-green-light/20">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="mb-2 text-xs font-semibold tracking-widest uppercase text-django-green">Section 5</p>
+        <h2 class="mb-6 text-3xl font-bold text-text">Attendee Costs</h2>
+        <div class="space-y-4 leading-relaxed text-text-muted">
+          <p>
+            Provide estimates on costs associated with flights, accommodation, meals, and ground transportation for an overview of the total cost for attendees.
+          </p>
+          <p>
+            Suggested cost examples include typical round-trip airfare from several major hub cities:
+          </p>
+          <ul class="flex flex-wrap gap-2">
+            {% for city in hub_cities %}
+              <li class="py-1 px-3 text-sm rounded-full border border-gray-200 bg-django-green text-white">{{ city }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{# ── 6. Why your city ── #}
+  <section id="city" class="py-16 border-t lg:py-20 border-django-green-light/20">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="mb-2 text-xs font-semibold tracking-widest uppercase text-django-green">Section 6</p>
+        <h2 class="mb-6 text-3xl font-bold text-text">Why Your City?</h2>
+        <p class="leading-relaxed text-text-muted">
+          Tell us what makes your city a great choice for DjangoCon US and an attractive destination for attendees. Consider proximity to major airports, local culture, accommodation options, things to see and do, and the strength of the local Django/Python community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+{# ── 7. Extras ── #}
+  <section id="extras" class="py-16 border-t lg:py-20 border-django-green-light/20">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="mb-2 text-xs font-semibold tracking-widest uppercase text-django-green">Section 7</p>
+        <h2 class="mb-6 text-3xl font-bold text-text">Anything Extra?</h2>
+        <div class="space-y-4 leading-relaxed text-text-muted">
+          <p>
+            We welcome any additional ideas for making the event especially useful and/or memorable.
+          </p>
+          <p>
+            If applicable, include any information about whether venues would be willing to sign multi-year deals. Hosting DjangoCon US at the same venue makes venue coordination considerably easier than having to interact with a new venue each year.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{# ── CTA ── #}
+  <section class="py-16 border-t bg-django-green-pale border-django-green-light/20">
+    <div class="px-4 mx-auto max-w-3xl text-center sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-text">Ready to Submit Your Proposal?</h2>
+      <p class="mx-auto mt-4 max-w-xl leading-relaxed text-text-muted">
+        Thanks so much! We look forward to hearing about all the fantastic places we can go in future years.
+      </p>
+      <a href="mailto:hello@djangocon.us"
+         class="inline-flex items-center py-3 px-6 mt-8 text-sm font-semibold text-white rounded-md shadow-sm transition-colors bg-django-green hover:bg-django-green-dark">
+        Get in Touch →
+      </a>
+    </div>
+  </section>
+
+{% endblock content %}

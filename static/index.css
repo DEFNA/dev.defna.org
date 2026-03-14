@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ─── Happy Hues Palette 10 ───────────────────────────────────────────────── */
 /* https://www.happyhues.co/palettes/10                                        */

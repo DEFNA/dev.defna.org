@@ -10,4 +10,7 @@ urlpatterns = [
     path("donate/", views.DonateView.as_view(), name="donate"),
     path("grants/", views.GrantsView.as_view(), name="grants"),
     path("contact/", views.ContactView.as_view(), name="contact"),
+    path("events/venue-host/", views.VenueHostView.as_view(), name="venue-host"),
+    path("blog/", views.BlogListView.as_view(), name="blog"),
+    path("blog/<slug:slug>/", views.BlogDetailView.as_view(), name="blog-detail"),
 ]

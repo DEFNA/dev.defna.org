@@ -9,6 +9,7 @@ dependencies = [
     "django-browser-reload",
     "django-click",
     "django-health-check",
+    "django-markdownx>=4.0.9",
     "django-prodserver[gunicorn]",
     "django-q2",
     "django-tailwind-cli",

@@ -52,6 +52,7 @@ INSTALLED_APPS += [
     "django_q",
     "django_tailwind_cli",
     "health_check",
+    "markdownx",
 ]
 
 # Our apps

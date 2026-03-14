@@ -24,7 +24,7 @@
         {# Events dropdown #}
         <div class="relative group">
           <button class="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-django-green hover:bg-django-green-pale transition-colors
-                         {% if request.resolver_match.url_name in 'djangocon,sponsored-events' %}text-django-green bg-django-green-pale{% endif %}"
+                         {% if request.resolver_match.url_name in 'djangocon,sponsored-events,venue-host' %}text-django-green bg-django-green-pale{% endif %}"
                   aria-haspopup="true" aria-expanded="false">
             Events
             <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -46,9 +46,22 @@
               </svg>
               Sponsored Events
             </a>
+            <a href="{% url 'venue-host' %}"
+               class="flex gap-2 items-center py-2.5 px-4 text-sm text-gray-700 hover:bg-django-green-pale hover:text-django-green">
+              <svg class="w-4 h-4 text-django-green-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              Host DjangoCon US
+            </a>
           </div>
         </div>
 
+        <a href="{% url 'blog' %}"
+           class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-django-green hover:bg-django-green-pale transition-colors
+                  {% if request.resolver_match.url_name in 'blog,blog-detail' %}text-django-green bg-django-green-pale{% endif %}">
+          Blog
+        </a>
         <a href="{% url 'grants' %}"
            class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-django-green hover:bg-django-green-pale transition-colors
                   {% if request.resolver_match.url_name == 'grants' %}text-django-green bg-django-green-pale{% endif %}">
@@ -87,7 +100,9 @@
         <p class="py-1 px-3 text-xs font-semibold tracking-widest uppercase text-text-muted">Events</p>
         <a href="{% url 'djangocon' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">DjangoCon US</a>
         <a href="{% url 'sponsored-events' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Sponsored Events</a>
+        <a href="{% url 'venue-host' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Host DjangoCon US</a>
       </div>
+      <a href="{% url 'blog' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Blog</a>
       <a href="{% url 'grants' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Grants</a>
       <a href="{% url 'contact' %}" class="flex items-center py-3 px-3 text-sm font-medium text-gray-700 rounded-md min-h-11 hover:text-django-green hover:bg-django-green-pale">Contact</a>
       <div class="pt-2">

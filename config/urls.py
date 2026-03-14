@@ -14,6 +14,7 @@ admin.site.site_title = admin_header
 
 urlpatterns = [
     path("", include("website.urls")),
+    path("markdownx/", include("markdownx.urls")),
     path(settings.ADMIN_URL, admin.site.urls),
     path(
         "health/",
